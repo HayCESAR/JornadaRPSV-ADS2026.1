@@ -418,7 +418,7 @@
        <div class="relative flex items-center gap-4 md:gap-8">
         <div class="relative z-10 flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center shadow-lg" style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));"><span class="text-2xl">🎓</span>
         </div>
-        <div class="flex-1 text-center py-6 rounded-2xl" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0), rgba(34, 211, 238, 0)); border: 1px solid rgba(99, 102, 241, 0);">
+        <div class="flex-1 text-center py-6 rounded-2xl" style="background: linear-gradient(135deg, rgba(99, 102, 241, 1), rgba(34, 211, 238, 1)); border: 1px solid rgba(99, 102, 241, 1);">
          <p class="text-lg font-bold" style="color: var(--text);">Parabéns! Você completou a jornada!</p>
         </div>
        </div>
