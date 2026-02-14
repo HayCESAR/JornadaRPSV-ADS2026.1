@@ -94,7 +94,7 @@
   <style>@view-transition { navigation: auto; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
- <body class="h-full w-full m-0 p-0" style="background: var(--background);">
+ <body class="h-full w-full m-0 p-0" style="background: var(--background);" onload="event.stopPropagation(); updateProgress(this)">
   <div id="app" class="h-full w-full overflow-auto scrollbar-hide"><!-- Header -->
    <header class="sticky top-0 z-50 px-6 py-4" style="background: linear-gradient(180deg, var(--background) 100%, transparent 0%);">
     <div class="max-w-5xl mx-auto">
@@ -154,8 +154,7 @@
              <div class="flex-1">
               <h3 class="font-semibold" style="color: var(--text);">Arquitetura de Software</h3>
               <div id="lesson2-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
-               <p>📌 Padrões arquiteturais: MVC, MVVM, Clean Architecture</p>
-               <p class="mt-2">📌 Decisões de design que impactam todo o sistema</p>
+               <p>📌 Padrões arquiteturais: Camadas, MVC, Orientado a Eventos, Microsserviços e Hexagonal</p>
               </div>
              </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
             </div>
@@ -168,9 +167,9 @@
              <div class="flex-1">
               <h3 class="font-semibold" style="color: var(--text);">Padrões de Projetos GoF</h3>
               <div id="lesson3-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
-               <p>📌 <strong>Criacionais:</strong> Factory, Singleton, Builder</p>
-               <p class="mt-1">📌 <strong>Estruturais:</strong> Adapter, Decorator, Facade</p>
-               <p class="mt-1">📌 <strong>Comportamentais:</strong> Observer, Strategy, Command</p>
+               <p>📌 <strong>Criacionais:</strong> Factory Method, Abstract Factory, Builder, Prototype e Singleton</p>
+               <p class="mt-1">📌 <strong>Estruturais:</strong> Adapter, Bridge, Composite, Decorator, Facade, Flyweight e Proxy</p>
+               <p class="mt-1">📌 <strong>Comportamentais:</strong> Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method e Visitor</p>
               </div>
              </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
             </div>
@@ -205,8 +204,7 @@
              <div class="flex-1">
               <h3 class="font-semibold" style="color: var(--text);">Análise de Domínio</h3>
               <div id="lesson4-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
-               <p>📌 Identificação de entidades, regras de negócio e contextos delimitados</p>
-               <p class="mt-2">📌 Domain-Driven Design (DDD) básico</p>
+               <p>📌 Identificação de atores, processos, restrições e oportunidades de melhorias</p>
               </div>
              </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
             </div>
@@ -219,8 +217,8 @@
              <div class="flex-1">
               <h3 class="font-semibold" style="color: var(--text);">Modelagem Conceitual</h3>
               <div id="lesson5-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
-               <p>📌 Diagramas UML: Classes, Casos de Uso, Sequência</p>
-               <p class="mt-2">📌 Representação visual do sistema</p>
+               <p>📌 Representação visual do sistema</p>
+               <p class="mt-2">📌 Diagramas UML: Casos de Uso e Classes</p>
               </div>
              </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
             </div>
@@ -233,8 +231,8 @@
              <div class="flex-1">
               <h3 class="font-semibold" style="color: var(--text);">Histórias de Usuário e Objetivos SMART</h3>
               <div id="lesson6-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
-               <p>📌 "Como [usuário], quero [funcionalidade], para [benefício]"</p>
-               <p class="mt-2">📌 SMART: Específico, Mensurável, Alcançável, Relevante, Temporal</p>
+               <p>📌 Histórias de Usuário: "Como [usuário], quero [funcionalidade], para [benefício]"</p>
+               <p class="mt-2">📌 Objetivos SMART: Específico, Mensurável, Alcançável, Relevante, Temporal</p>
               </div>
              </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
             </div>
@@ -247,8 +245,7 @@
              <div class="flex-1">
               <h3 class="font-semibold" style="color: var(--text);">Priorização de Requisitos</h3>
               <div id="lesson7-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
-               <p>📌 MoSCoW: Must, Should, Could, Won't</p>
-               <p class="mt-2">📌 Matriz de valor vs esforço</p>
+               <p>📌 Técnicas de Priorização: MoSCoW, Modelo Kano, Matriz Valor x Esforço, Pontuação ponderada (Weighted Scoring) e Priorização por dependência</p>
               </div>
              </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
             </div>
@@ -268,7 +265,7 @@
            <h2 class="text-xl md:text-2xl font-bold mt-2" style="color: var(--text);">Criando uma Solução Válida</h2>
            <p class="text-sm mt-1 opacity-70" style="color: var(--text);">Testes e validação de código</p>
           </div>
-          <div class="flex items-center gap-2"><span class="mono text-sm" style="color: var(--secondary-action);">4 aulas</span>
+          <div class="flex items-center gap-2"><span class="mono text-sm" style="color: var(--secondary-action);">3 aulas</span>
            <svg id="arrow-phase3" class="w-6 h-6 transition-transform duration-300" style="color: var(--secondary-action);" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
            </svg>
           </div>
@@ -283,8 +280,9 @@
              <div class="flex-1">
               <h3 class="font-semibold" style="color: var(--text);">Desenvolvimento Orientado a Testes</h3>
               <div id="lesson8-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
-               <p>📌 TDD: Red → Green → Refactor</p>
-               <p class="mt-2">📌 Escreva o teste antes do código!</p>
+               <p>📌 TDD: Escreva o teste antes do código seguindo o ciclo Red → Green → Refactor</p>
+               <p class="mt-2">📌 ATDD: Defina critérios de aceitação antes do desenvolvimento e crie código para satisfazê-los</p>
+               <p class="mt-2">📌 BDD: Descreva comportamentos esperados em linguagem ubíqua e desenvolva a partir deles</p>
               </div>
              </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
             </div>
@@ -297,8 +295,8 @@
              <div class="flex-1">
               <h3 class="font-semibold" style="color: var(--text);">Plano de Testes I</h3>
               <div id="lesson9-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
-               <p>📌 Testes unitários e de integração</p>
-               <p class="mt-2">📌 Cobertura de código e métricas</p>
+                <p>Estágios e Tipos de Testes</p>
+                <p class="mt-2">📌 Início da elaboração do Plano de Testes com definição de escopo, estágios e tipos de testes e suíte de testes</p>
               </div>
              </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
             </div>
@@ -311,22 +309,8 @@
              <div class="flex-1">
               <h3 class="font-semibold" style="color: var(--text);">Plano de Testes II</h3>
               <div id="lesson10-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
-               <p>📌 Testes de sistema e aceitação</p>
-               <p class="mt-2">📌 Automação e CI/CD</p>
-              </div>
-             </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
-            </div>
-           </div>
-           <div class="lesson-card p-4 rounded-xl cursor-pointer" style="background: var(--background);" onclick="event.stopPropagation(); toggleLesson('lesson11')">
-            <div class="flex items-center gap-3">
-             <div class="w-8 h-8 rounded-lg flex items-center justify-center mono text-sm font-bold" style="background: #10b981; color: var(--text);">
-              11
-             </div>
-             <div class="flex-1">
-              <h3 class="font-semibold" style="color: var(--text);">Plano de Testes III</h3>
-              <div id="lesson11-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
-               <p>📌 Testes de performance e segurança</p>
-               <p class="mt-2">📌 Testes exploratórios</p>
+                <p>Técnicas de Modelagem de Testes</p>
+                <p class="mt-2">📌 Ampliação da suíte de testes, execução e relatório de falhas</p>
               </div>
              </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
             </div>
@@ -346,23 +330,37 @@
            <h2 class="text-xl md:text-2xl font-bold mt-2" style="color: var(--text);">Refinando a Solução</h2>
            <p class="text-sm mt-1 opacity-70" style="color: var(--text);">Qualidade e entrega final</p>
           </div>
-          <div class="flex items-center gap-2"><span class="mono text-sm" style="color: var(--secondary-action);">4 aulas</span>
+          <div class="flex items-center gap-2"><span class="mono text-sm" style="color: var(--secondary-action);">3 aulas</span>
            <svg id="arrow-phase4" class="w-6 h-6 transition-transform duration-300" style="color: var(--secondary-action);" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
            </svg>
           </div>
          </div>
          <div id="phase4-content" class="overflow-hidden transition-all duration-500 card-collapsed">
           <div class="mt-6 space-y-3">
+           <div class="lesson-card p-4 rounded-xl cursor-pointer" style="background: var(--background);" onclick="event.stopPropagation(); toggleLesson('lesson11')">
+            <div class="flex items-center gap-3">
+             <div class="w-8 h-8 rounded-lg flex items-center justify-center mono text-sm font-bold" style="background: #f59e0b; color: #1a1a2e;">
+              11
+             </div>
+             <div class="flex-1">
+              <h3 class="font-semibold" style="color: var(--text);">Code Smells e Refatoração</h3>
+              <div id="lesson11-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
+               <p>📌 Identificando "maus cheiros" no código</p>
+               <p class="mt-2">📌 Técnicas de refatoração</p>
+              </div>
+             </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
+            </div>
+           </div>
            <div class="lesson-card p-4 rounded-xl cursor-pointer" style="background: var(--background);" onclick="event.stopPropagation(); toggleLesson('lesson12')">
             <div class="flex items-center gap-3">
              <div class="w-8 h-8 rounded-lg flex items-center justify-center mono text-sm font-bold" style="background: #f59e0b; color: #1a1a2e;">
               12
              </div>
              <div class="flex-1">
-              <h3 class="font-semibold" style="color: var(--text);">Code Smells e Refatoração</h3>
+              <h3 class="font-semibold" style="color: var(--text);">Consolidação de Conteúdo</h3>
               <div id="lesson12-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
-               <p>📌 Identificando "maus cheiros" no código</p>
-               <p class="mt-2">📌 Técnicas de refatoração: Extract Method, Rename, Move</p>
+               <p>📌 Revisão geral dos conceitos</p>
+               <p class="mt-2">📌 Preparação para a apresentação final</p>
               </div>
              </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
             </div>
@@ -373,38 +371,10 @@
               13
              </div>
              <div class="flex-1">
-              <h3 class="font-semibold" style="color: var(--text);">Falhas e Regressão</h3>
-              <div id="lesson13-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
-               <p>📌 Debugging e análise de falhas</p>
-               <p class="mt-2">📌 Testes de regressão para evitar bugs recorrentes</p>
-              </div>
-             </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
-            </div>
-           </div>
-           <div class="lesson-card p-4 rounded-xl cursor-pointer" style="background: var(--background);" onclick="event.stopPropagation(); toggleLesson('lesson14')">
-            <div class="flex items-center gap-3">
-             <div class="w-8 h-8 rounded-lg flex items-center justify-center mono text-sm font-bold" style="background: #f59e0b; color: #1a1a2e;">
-              14
-             </div>
-             <div class="flex-1">
-              <h3 class="font-semibold" style="color: var(--text);">Consolidação de Conteúdo</h3>
-              <div id="lesson14-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
-               <p>📌 Revisão geral dos conceitos</p>
-               <p class="mt-2">📌 Preparação para a apresentação final</p>
-              </div>
-             </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
-            </div>
-           </div>
-           <div class="lesson-card p-4 rounded-xl cursor-pointer" style="background: var(--background);" onclick="event.stopPropagation(); toggleLesson('lesson15')">
-            <div class="flex items-center gap-3">
-             <div class="w-8 h-8 rounded-lg flex items-center justify-center mono text-sm font-bold" style="background: #f59e0b; color: #1a1a2e;">
-              15
-             </div>
-             <div class="flex-1">
               <h3 class="font-semibold" style="color: var(--text);">Apresentação Final</h3>
-              <div id="lesson15-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
+              <div id="lesson13-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
                <p>🎉 Showcase dos projetos desenvolvidos</p>
-               <p class="mt-2">🏆 Celebração das conquistas!</p>
+               <p class="mt-2"> Devem ser apresentados: modelagem conceitual definitiva, metas alcançadas/inalcançadas, arquitetura de software utilizada e justificativa, padrões de projeto utilizados e justificativas, resultado final do plano de testes (validação)</p>
               </div>
              </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
             </div>
