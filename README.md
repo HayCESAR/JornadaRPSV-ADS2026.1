@@ -143,7 +143,7 @@
                <p>📌 <strong>SOLID:</strong> Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion</p>
                <p class="mt-2">📌 <strong>GRASP:</strong> General Responsibility Assignment Software Patterns - padrões para atribuição de responsabilidades</p>
               </div>
-             </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
+             </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)" selected>
             </div>
            </div>
            <div class="lesson-card p-4 rounded-xl cursor-pointer" style="background: var(--background);" onclick="event.stopPropagation(); toggleLesson('lesson2')">
@@ -156,7 +156,7 @@
               <div id="lesson2-details" class="hidden mt-2 text-sm opacity-80" style="color: var(--text);">
                <p>📌 Padrões arquiteturais: Camadas, MVC, Orientado a Eventos, Microsserviços e Hexagonal</p>
               </div>
-             </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
+             </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)" selected>
             </div>
            </div>
            <div class="lesson-card p-4 rounded-xl cursor-pointer" style="background: var(--background);" onclick="event.stopPropagation(); toggleLesson('lesson3')">
@@ -171,7 +171,7 @@
                <p class="mt-1">📌 <strong>Estruturais:</strong> Adapter, Bridge, Composite, Decorator, Facade, Flyweight e Proxy</p>
                <p class="mt-1">📌 <strong>Comportamentais:</strong> Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method e Visitor</p>
               </div>
-             </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)">
+             </div><input type="checkbox" class="w-5 h-5 rounded accent-cyan-400" onclick="event.stopPropagation(); updateProgress(this)" selected>
             </div>
            </div>
           </div>
